@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   get 'login' => 'sessions#login'
 
+  delete '/logout',
+    to: "sessions#destroy"
+
   resources :users,
     only: [:new, :create],
     path_names: { new: 'signup' }
