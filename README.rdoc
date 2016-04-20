@@ -1,25 +1,17 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is an interactive online tool to help you reach your fitness potential.
 
-Things you may want to cover:
+Features (atm):
 
-* Ruby version
+* Own Workout Profile
 
-* System dependencies
+* Workouts to choose from
 
-* Configuration
+* Body type finder
 
-* Database creation
+* Easy tips for weight loss
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 * ...
 
