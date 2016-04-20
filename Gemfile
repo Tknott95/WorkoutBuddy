@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rspec-rails'
-gem 'guard-bundler'
-gem 'guard-rspec'
-gem 'factory_girl_rails'
+
 group :test do
   gem 'capybara'
 end
@@ -41,6 +38,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+  gem 'guard-migrate'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'quiet_assets'
 
 end
 
