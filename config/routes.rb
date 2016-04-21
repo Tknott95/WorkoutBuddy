@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 default_url_options host: 'localhost', port: 3000
 
   get 'sessions/login'
+
   get 'workouts' => 'workouts#new'
   get 'login' => 'sessions#login'
   post 'login' => 'sessions#create'
