@@ -6,7 +6,7 @@ feature 'User Authentication' do
 
     expect(page).to have_link('Signup')
 
-    click_link 'Signup'
+    click_link ('Signup')
 
     fill_in 'first_name', with: 'bob'
     fill_in 'last_name', with: 'smith'

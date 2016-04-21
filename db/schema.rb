@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420225546) do
+ActiveRecord::Schema.define(version: 20160421005107) do
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20160420225546) do
     t.datetime "updated_at",                      null: false
     t.boolean  "verified_email",  default: false
     t.string   "token",           default: ""
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string   "workout_name"
+    t.string   "body_part_hit"
+    t.integer  "sets"
+    t.integer  "reps"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

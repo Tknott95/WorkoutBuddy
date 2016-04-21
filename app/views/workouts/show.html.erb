@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to workouts_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_workout_path(@workout), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show workout</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Workout name:</dt>
+  <dd><%= @workout.workout_name %></dd>
+
+  <dt>Body part hit:</dt>
+  <dd><%= @workout.body_part_hit %></dd>
+
+  <dt>Sets:</dt>
+  <dd><%= @workout.sets %></dd>
+
+  <dt>Reps:</dt>
+  <dd><%= @workout.reps %></dd>
+
+</dl>
