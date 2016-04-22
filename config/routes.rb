@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'profiles/edit'
+
 default_url_options host: 'localhost', port: 3000
 
   get 'sessions/login'
@@ -9,6 +11,7 @@ default_url_options host: 'localhost', port: 3000
   post 'login' => 'sessions#create'
 
   get 'users/:id' => 'users#show'
+  get 'users' => 'users#index'
 
   get 'sessions_controller/login'
 
@@ -21,7 +24,10 @@ default_url_options host: 'localhost', port: 3000
 
   get 'verification/:token', to: 'users#verify', as: 'verify_email'
 
-  resources :users,
-    only: [:new, :create],
-    path_names: { new: 'signup' }
+resources :profiles,
+  only: [:edit]
+
+resources :users,
+  only: [:new, :create],
+  path_names: {new: 'signup'}
 end
