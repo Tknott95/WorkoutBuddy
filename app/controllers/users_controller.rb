@@ -8,8 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      @user.needs_verification!
-      session[:user_id] = @user.id
+      session[:id] = @user.id
       redirect_to root_path,
         notice: "Thank you for signing up #{@user.first_name.titlecase}"
     else
@@ -18,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:id])
   end
 
 

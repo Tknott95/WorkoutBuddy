@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'sendgrid'
 gem 'rspec-collection_matchers'
 gem 'faker'

@@ -8,6 +8,8 @@ default_url_options host: 'localhost', port: 3000
   get 'login' => 'sessions#login'
   post 'login' => 'sessions#create'
 
+  get 'users/:id' => 'users#show'
+
   get 'sessions_controller/login'
 
   root 'main#index'
