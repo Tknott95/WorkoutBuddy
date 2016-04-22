@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'profiles/edit'
+  get 'profiles/edit' => 'profiles#edit'
 
 default_url_options host: 'localhost', port: 3000
 
@@ -15,17 +15,20 @@ default_url_options host: 'localhost', port: 3000
 
   get 'sessions_controller/login'
 
+  get 'users/signup' => 'users#form'
+
   root 'main#index'
 
-  get 'login' => 'sessions#login'
+  get 'about' => 'main#about'
+  get'contact' => 'main#contact'
+
+
 
   delete '/logout',
     to: "sessions#destroy"
 
   get 'verification/:token', to: 'users#verify', as: 'verify_email'
 
-resources :profiles,
-  only: [:edit]
 
 resources :users,
   only: [:new, :create],
