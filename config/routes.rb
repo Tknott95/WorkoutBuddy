@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   get 'profiles/edit' => 'profiles#edit'
 
-default_url_options host: 'localhost', port: 3000
-
   get 'sessions/login'
 
   get 'workouts' => 'workouts#new'

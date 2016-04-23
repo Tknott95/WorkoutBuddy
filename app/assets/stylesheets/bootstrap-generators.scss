@@ -4,6 +4,11 @@
 
 body {
   padding-top: $navbar-height + 10px;
+  margin: 0;
+  background-image: url('grey.png');
+  background-size: 1440px 800px;
+  background-repeat:no-repeat;
+  font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .page-header {
